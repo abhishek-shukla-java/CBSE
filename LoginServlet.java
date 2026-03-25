@@ -5,6 +5,10 @@ import java.sql.*;
 
 public class LoginServlet extends HttpServlet
 {
+	public void doGet(HttpServletRequest req,HttpServletResponse res)throws ServletException,IOException{
+		res.sendRedirect("login.html");
+	}
+	
 	public void doPost(HttpServletRequest req,HttpServletResponse res) throws IOException,ServletException {
 		String user = req.getParameter("user");
 		String pass = req.getParameter("pass");
@@ -30,5 +34,6 @@ public class LoginServlet extends HttpServlet
 		} catch(Exception e){
 			e.printStackTrace();
 		}
+		
 	}
 }
