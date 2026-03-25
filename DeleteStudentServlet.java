@@ -25,8 +25,8 @@ public class DeleteStudentServlet extends HttpServlet {
             ps.executeUpdate();
 
             out.println("Deleted Successfully<br>");
-            String path = request.getContextPath();
-			out.println("<a href='" + path + "/home.html'>Go Home</a>");
+			out.println("You will be redirected in 4 seconds");
+            response.setHeader("Refresh","4;home.html");
 
         } catch (Exception e) {
             e.printStackTrace();
