@@ -65,6 +65,16 @@
 		<exception-type>java.lang.Exception</exception-type>
 		<location>/WEB-INF/pages/404.jsp</location>
 	</error-page>
-		
-
+	
+	
+	<servlet>
+		<servlet-name>DownloadResultServlet</servlet-name>
+		<servlet-class>DownloadResultServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DownloadResultServlet</servlet-name>
+		<url-pattern>/download</url-pattern>
+	</servlet-mapping>
+	
+	
 </web-app>
