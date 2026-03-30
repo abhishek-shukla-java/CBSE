@@ -23,13 +23,11 @@ public class LoginServlet extends HttpServlet
 			ResultSet rs = ps.executeQuery();
 			
 			if(rs.next()) {
-				RequestDispatcher rd = req.getRequestDispatcher("home.html");
-				rd.forward(req,res);
+				res.sendRedirect("home.html?user="+user);
 			}
 			
 			else{
-				RequestDispatcher rd = req.getRequestDispatcher("error.html");
-				rd.forward(req,res);
+				res.sendRedirect("error.html");
 			}
 		} catch(Exception e){
 			e.printStackTrace();

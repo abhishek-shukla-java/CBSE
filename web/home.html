@@ -3,6 +3,18 @@
 <body>
 
 <h2>CBSE Result</h2>
+<h2>Welcome</h2>
+<img src="" id="photo" width="150" height="150"><br><br>
+<script>
+	var url = window.location.href;
+	var user = "";
+	
+	if(url.indexOf("user=")!==-1)
+	{
+		user = url.split("user=")[1];
+	}
+	document.getElementById("photo").src = "showImage?user="+user;
+</script>
 
 <a href="add.html">Add Student</a><br><br>
 <a href="find.html">Find Student</a><br><br>
